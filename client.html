@@ -1,0 +1,10 @@
+<script>
+    let ws = new WebSocket('ws://localhost:8000');
+    console.log(ws);
+
+    ws.onopen = function (event){
+        alert("[open] Connection established");
+        alert("Sending to server");
+        ws.send("Server Hello!");
+    };
+</script>
